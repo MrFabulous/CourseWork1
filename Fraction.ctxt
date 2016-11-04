@@ -1,0 +1,59 @@
+#BlueJ class context
+comment0.params=val
+comment0.target=Fraction(java.math.BigInteger)
+comment0.text=\n\ Constructs\ a\ Fraction\ taking\ the\ value\ of\ its\ parameter.\n\n\ @param\ val\ \ non-null;\ the\ value\ the\ Fraction\ is\ supposed\ to\ take\n
+comment1.params=val
+comment1.target=Fraction(long)
+comment1.text=\n\ Constructs\ a\ new\ Fraction\ taking\ the\ value\ of\ its\ parameter.\n\n\ @param\ val\ \ the\ value\ the\ Fraction\ is\ supposed\ to\ take\n
+comment10.params=
+comment10.target=Fraction\ invert()
+comment10.text=\n\ Returns\ the\ inverse\ of\ this\ Fraction,\ i.e.,\ the\ Fraction\ 1\ /\ this.\n\ Note\ that\ 1/(a/b)\ \=\ (b/a)\n\ @return\ 1\ /\ this\n
+comment11.params=
+comment11.target=int\ signum()
+comment11.text=\n\ Returns\ the\ sign\ of\ this\ Fraction\:\ 1\ if\ its\ value\ is\ positive,\n\ 0\ if\ it\ is\ zero,\ -1\ if\ it\ is\ negative.\n\n\ @return\ the\ sign\ of\ this\ Fraction\ (1\ if\ its\ value\ is\ positive,\n\ \ 0\ if\ it\ is\ zero,\ -1\ if\ it\ is\ negative)\ \n
+comment12.params=
+comment12.target=Fraction\ abs()
+comment12.text=\n\ Returns\ the\ absolute\ value\ of\ this\ Fraction,\ i.e.,\n\ the\ value\ of\ the\ Fraction\ itself\ if\ it\ is\ non-negative,\n\ otherwise\ the\ negated\ value.\n\ \n\ @return\ the\ absolute\ value\ of\ this\ Fraction\n
+comment13.params=val
+comment13.target=Fraction\ max(Fraction)
+comment13.text=\n\ Returns\ the\ maximum\ of\ this\ Fraction\ and\ val.\n\n\ @param\ val\ \ non-null;\ the\ value\ with\ which\ the\ maximum\ is\ to\ be\ computed\n\ @return\ the\ maximum\ of\ this\ Fraction\ and\ val\n
+comment14.params=val
+comment14.target=Fraction\ min(Fraction)
+comment14.text=\n\ Returns\ the\ minimum\ of\ this\ Fraction\ and\ val.\n\n\ @param\ val\ \ non-null;\ the\ value\ with\ which\ the\ minimum\ is\ to\ be\ computed\n\ @return\ the\ minimum\ of\ this\ Fraction\ and\ val\n
+comment15.params=exponent
+comment15.target=Fraction\ pow(int)
+comment15.text=\n\ Returns\ this\ Fraction\ taken\ to\ the\ power\ of\ exponent.\ Here\n\ exponent\ may\ also\ be\ zero\ or\ negative.\ Note\ that\ a^0\ \=\ 1\ and\n\ a^b\ \=\ (1/a)^(-b)\ if\ b\ <\ 0.\ \n\ \n\ @param\ exponent\ \ the\ exponent\ to\ which\ we\ want\ to\ take\ this\n\ @return\ this\ Fraction\ taken\ to\ the\ power\ of\ exponent\n
+comment16.params=val
+comment16.target=int\ compareTo(Fraction)
+comment16.text=\n\ Compares\ this\ Fraction\ with\ the\ specified\ Fraction.\n\ \n\ @param\ val\ \ non-null;\ value\ with\ which\ this\ Fraction\ is\ to\ be\ compared\ \n\ @return\ -1,\ 0\ or\ 1\ as\ this\ Fraction\ is\ numerically\ less\ than,\n\ \ \ \ \ \ \ \ \ equal\ to,\ or\ greater\ than\ val\n\ @see\ java.math.BigInteger\#compareTo(BigInteger)\n
+comment17.params=val
+comment17.target=boolean\ isEqualTo(Fraction)
+comment17.text=\n\ Checks\ if\ this\ Fraction\ and\ val\ represent\ equal\ values.\n\n\ @param\ val\ \ potentially\ null\ (in\ this\ case\ the\ method\ returns\ false);\n\ \ the\ value\ with\ which\ this\ Fraction\ is\ to\ be\ compared\ for\ equality\n\ @return\ true\ if\ this\ Fraction\ and\ other\ represent\ the\ same\ value;\n\ \ false\ otherwise\n
+comment18.params=
+comment18.target=java.lang.String\ toString()
+comment18.text=\n\ Returns\ a\ normalised\ String\ representation\ of\ this\ Fraction.\n\ For\ example,\ new\ Fraction(5,3)\ and\ new\ Fraction(-10,-6)\ will\n\ be\ represented\ as\ "(5\ /\ 3)".\ The\ String\ representation\ of\n\ new\ Fraction(5,-10)\ and\ new\ Fraction(-12,24)\ is\ "(-1\ /\ 2)".\n\n\ In\ case\ this\ Fraction\ has\ an\ integer\ value,\ just\ the\ String\n\ representation\ of\ the\ integer\ value\ is\ returned.\ For\ example,\n\ new\ Fraction(-2)\ has\ the\ String\ representation\ "-2";\ and\n\ new\ Fraction(0),\ new\ Fraction(0,3),\ and\ new\ Fraction(4,0)\n\ all\ have\ the\ String\ representation\ "0".\n\n\ @return\ a\ normalised\ String\ representation\ of\ this\ Fraction\n
+comment2.params=numerator\ denominator
+comment2.target=Fraction(java.math.BigInteger,\ java.math.BigInteger)
+comment2.text=\n\ Constructs\ a\ Fraction\ corresponding\ to\ numerator\ /\ denominator.\n\ The\ value\ is\ 0\ if\ denominator\ is\ 0.\n\n\ @param\ numerator\ \ non-null;\ value\ of\ the\ numerator\n\ @param\ denominator\ \ non-null;\ value\ of\ the\ denominator\n
+comment3.params=numerator\ denominator
+comment3.target=Fraction(long,\ long)
+comment3.text=\n\ Constructs\ a\ Fraction\ corresponding\ to\ numerator\ /\ denominator.\n\ The\ value\ is\ 0\ if\ denominator\ is\ 0.\n\n\ @param\ numerator\ \ the\ numerator\ of\ the\ Fraction\n\ @param\ denominator\ \ the\ denominator\ of\ the\ Fraction\n
+comment4.params=val
+comment4.target=Fraction\ add(Fraction)
+comment4.text=\n\ Returns\ a\ Fraction\ whose\ value\ is\ (this\ +\ val).\n\ (Note\ that\ a/b\ +\ c/d\ \=\ (a*d\ +\ b*c)/(b*d).)\n\ \n\ @param\ val\ \ non-null;\ to\ be\ added\ to\ this\n\ @return\ this\ +\ val\n
+comment5.params=fractions
+comment5.target=Fraction\ sumAll(Fraction[])
+comment5.text=\n\ Returns\ the\ sum\ of\ all\ elements\ of\ vals.\n\n\ @param\ fractions\ \ array\ of\ Fractions\ to\ be\ summed\ up;\ may\ be\ or\ contain\ null\n\ @return\ null\ if\ vals\ is\ or\ contains\ null;\ the\ sum\ of\ all\ elements\ of\n\ \ vals\ otherwise\n
+comment6.params=val
+comment6.target=Fraction\ subtract(Fraction)
+comment6.text=\n\ Returns\ a\ Fraction\ whose\ value\ is\ (this\ -\ val).\n\n\ @param\ val\ \ non-null;\ to\ be\ subtracted\ from\ this\ Fraction\n\ @return\ this\ -\ val\n
+comment7.params=val
+comment7.target=Fraction\ multiply(Fraction)
+comment7.text=\n\ Returns\ a\ Fraction\ whose\ value\ is\ (this\ *\ val).\n\ (Note\ that\ a/b\ *\ c/d\ \=\ (a*c)/(b*d).)\n\n\ @param\ val\ \ non-null;\ to\ be\ multiplied\ to\ this\ Fraction\n\ @return\ this\ *\ val\n
+comment8.params=val
+comment8.target=Fraction\ divide(Fraction)
+comment8.text=\n\ Returns\ a\ Fraction\ whose\ value\ is\ (this\ /\ val).\ \n\ (Note\ that\ (a/b)\ \ (c/d)\ \=\ (a*d)/(b*c).)\n\ \n\ @param\ val\ \ non-null;\ value\ by\ which\ this\ Fraction\ is\ to\ be\ divided\n\ @return\ this\ /\ val\n
+comment9.params=
+comment9.target=Fraction\ negate()
+comment9.text=\n\ Returns\ a\ Fraction\ whose\ value\ is\ (-this).\n\n\ @return\ -this\n
+numComments=19
