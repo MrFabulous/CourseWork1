@@ -164,8 +164,8 @@ public class Fraction {
      */
     public Fraction invert() {
         // TODO Auto-generated method stub
+        return new Fraction(this.denominator, this.numerator);
         
-        return null;
     }
 
     /**
@@ -210,8 +210,9 @@ public class Fraction {
      */
     public Fraction max(Fraction val) {
         // Compare objects val and this if val gr
-        if (compareTo(val) >= 0)
+        if (compareTo(val) >= 0) {
             return this;
+        }
         return val;
     }
 
@@ -222,8 +223,10 @@ public class Fraction {
      * @return the minimum of this Fraction and val
      */
     public Fraction min(Fraction val) {
-        // TODO Auto-generated method stub
-        return null;
+        if (compareTo(val) >= 0) {
+            return val;
+        }
+        return this;
     }
 
     /**
@@ -235,8 +238,15 @@ public class Fraction {
      * @return this Fraction taken to the power of exponent
      */
     public Fraction pow(int exponent) {
-        // TODO Auto-generated method stub
-        return null;
+        if(exponent == 0) { // Note that a^0 = 1
+            return new Fraction(BigInteger.ONE);
+        } else if (exponent == 1) { // Note that a^1 = a
+            return this;
+        } else if (exponent < 0) {// a^b = (1/a)^(-b) if b < 0.
+            return new Fraction (denominator.pow(-exponent),numerator.pow(-exponent));
+        } else {// return all other positive cases
+            return new Fraction (numerator.pow(exponent), denominator.pow(exponent));
+        }
     }
 
     /**
@@ -248,7 +258,15 @@ public class Fraction {
      * @see java.math.BigInteger#compareTo(BigInteger)
      */
     public int compareTo(Fraction val) {
-        return this.numerator.compareTo(val.numerator); 
+        if (denominator.equals(val.denominator)){
+            return numerator.compareTo(val.numerator);
+        }
+        else if (signum() != val.signum()){
+            return denominator.compareTo(val.denominator);
+        }  
+        else { 
+            return numerator.multiply(denominator).compareTo(val.denominator.multiply(val.numerator));
+        } 
     }
 
     /**
@@ -259,9 +277,11 @@ public class Fraction {
      * @return true if this Fraction and other represent the same value;
      *  false otherwise
      */
-    public boolean isEqualTo(Fraction val) {
-        
-        return false;
+    public boolean isEqualTo(Fraction val) { 
+        if (val==null || !(val instanceof Fraction)){
+            return false;
+        }
+        return   val.denominator.equals(numerator) && numerator.equals(numerator);
     }
 
     /**
