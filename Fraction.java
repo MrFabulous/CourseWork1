@@ -64,7 +64,7 @@ public class Fraction {
      * @param denominator  the denominator of the Fraction
      */
     public Fraction(long numerator, long denominator) {
-        // TODO Auto-generated method stub
+        // accepts a fraction using the long data primitive
         this(BigInteger.valueOf(numerator), BigInteger.valueOf(denominator));
         
     }
@@ -77,6 +77,7 @@ public class Fraction {
      * @return this + val
      */
     public Fraction add(Fraction val) {
+        // Add this value 
         BigInteger axd = this.numerator.multiply(val.denominator);
         BigInteger bxc = this.denominator.multiply(val.numerator);
         BigInteger bxd = this.denominator.multiply(val.denominator);
@@ -91,11 +92,13 @@ public class Fraction {
      *  vals otherwise
      */
     public static Fraction sumAll(Fraction[] fractions) {
-        // TODO Auto-generated method stub
+        // Create array to hold all fractions
         Fraction sum = fractions[0];
+        // Check if array empty
         if (sum == null) {
             return null;
         }
+        // add all fractions together using add function
         for (int i = 1; i < fractions.length; i++) {
             if (fractions[i] == null) {
             return null;
@@ -112,6 +115,7 @@ public class Fraction {
      * @return this - val
      */
     public Fraction subtract(Fraction val) {
+        // Subtract fraction
         BigInteger axd = this.numerator.multiply(val.denominator);
         BigInteger bxc = this.denominator.multiply(val.numerator);
         BigInteger bxd = this.denominator.multiply(val.denominator);
@@ -126,6 +130,7 @@ public class Fraction {
      * @return this * val
      */
     public Fraction multiply(Fraction val) {
+        // Multiply fraction
         BigInteger axc = this.numerator.multiply(val.numerator);
         BigInteger bxd = this.denominator.multiply(val.denominator);
         return new Fraction(axc, bxd);
